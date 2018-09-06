@@ -19,7 +19,7 @@ const Header = () => (
       <Link
         to="/"
       >
-        Acme docs
+        Smakk docs
       </Link>
     </h1>
   </HeaderContainer>

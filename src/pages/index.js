@@ -33,7 +33,7 @@ class IndexPage extends Component {
   render() {
     return (
       <div>
-        <h1>Acme documentation</h1>
+        <h1>Documentation</h1>
         <p>Welcome to your new documentation site!</p>
         <CardContainer>
           <Card to="/getting-started">
