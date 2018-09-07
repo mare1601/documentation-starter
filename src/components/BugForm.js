@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BugForm = () => (
+const bugform = () => (
     <form className="pure-form pure-form-stacked" name="bugform" method="POST" netlify>
         <label>
           Your Name: <input type="text" name="name" />
@@ -31,4 +31,4 @@ const BugForm = () => (
     </form>
 );
 
-export default BugForm;
+export default bugform;
