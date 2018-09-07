@@ -40,19 +40,6 @@ All the docs are written in Markdown in /src/docs. You can edit the existing pag
 3. Netlify CMS will write these changes to the Git Repo
 4. http://localhost:8000/<path_of_the_doc> to view it in your browser
 
-## Adding DocSearch
-
-You can add search via DocSearch (Algoli) (you'll need to sign up first) by defining environment variables in your dev environment and in your build configuration when deploying to production.
-
-Here's below a template for a dev environment set up using a .env.development file that you should put at the root of the repository. If you don't think search is necessary for this site just don't include variable keys
-
-```
-#.env.development
-GATSBY_DOCSEARCH_API_KEY=<your DocSearch API Key>
-GATSBY_DOCSEARCH_INDEX=<your DocSearch index reference>
-```
-
-Check https://www.gatsbyjs.org/docs/environment-variables/ to know more about setting up environment variables.
 
 ## Deploying
 
