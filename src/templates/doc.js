@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import {graphql} from 'gatsby';
 
-import Content, { HTMLContent } from '../components/Content'
+import Content, { HTMLContent } from '../components/contentBlocks'
 import Layout from '../components/layout';
 
 

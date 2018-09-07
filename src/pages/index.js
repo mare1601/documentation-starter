@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Content, {HTMLContent} from '../components/Content';
+import Content, {HTMLContent} from '../components/contentBlocks';
 import {graphql, Link} from 'gatsby';
 
 import Layout from '../components/layout';
