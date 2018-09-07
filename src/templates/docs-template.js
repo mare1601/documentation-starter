@@ -1,16 +1,9 @@
 import React, { Component } from 'react'
-import mixpanel from 'mixpanel-browser' // import the mixpanel lib
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 class Template extends Component {
-  // Init and send the event
-  componentDidMount() {
-    const { markdownRemark: page } = this.props.data;
-    if (process.env.GATSBY_MIXPANEL_KEY) {
-      mixpanel.init(process.env.GATSBY_MIXPANEL_KEY)
-      mixpanel.track(`docs.view:${page.frontmatter.title}`)
-    }
-  }
+
 
   render() {
     const { markdownRemark: page } = this.props.data;
@@ -40,4 +33,4 @@ export const pageQuery = graphql`
     }
   }
 `
-;
+  ;

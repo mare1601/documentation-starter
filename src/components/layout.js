@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Chrome from '../components/Chrome'
-import Header from '../components/Header'
-import './index.css'
+import Chrome from './Chrome'
+import Header from './Header'
+import './layout.css'
 
 const TemplateWrapper = ({ children }) => (
   <Chrome header={<Header />}>
@@ -15,7 +15,7 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    {children()}
+    {children}
   </Chrome>
 )
 

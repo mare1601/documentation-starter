@@ -5,8 +5,8 @@
  */
 
 const path = require('path');
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
   const docTemplate = path.resolve(`src/templates/docs-template.js`);
   return graphql(`{
       allMarkdownRemark(
@@ -30,7 +30,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       if (result.errors) {
         return Promise.reject(result.errors);
       }
-result.data.allMarkdownRemark.edges
+      result.data.allMarkdownRemark.edges
         .forEach(({ node }) => {
           createPage({
             path: node.frontmatter.path,

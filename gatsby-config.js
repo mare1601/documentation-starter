@@ -3,6 +3,7 @@ module.exports = {
     title: 'Welcome to the docs!',
   },
   plugins: [
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-transformer-remark',

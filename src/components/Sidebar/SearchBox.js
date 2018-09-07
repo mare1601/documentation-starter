@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { navigateTo } from "gatsby-link"
+import { navigate } from "gatsby-link"
 
 const Container = styled.div`
   display: flex;
@@ -33,20 +33,20 @@ class SearchBox extends React.Component {
     // eslint-disable-next-line no-undef
     const a = document.createElement(`a`)
     a.href = e._args[0].url
-    navigateTo(`${a.pathname}${a.hash}`)
+    navigate(`${a.pathname}${a.hash}`)
   }
 
-  componentDidMount(){
+  componentDidMount() {
     window.addEventListener(
       `autocomplete:selected`,
       this.autocompleteSelected,
       true
     )
 
-    if(window.docsearch){
-      window.docsearch({ 
-        apiKey: process.env.GATSBY_DOCSEARCH_API_KEY, 
-        indexName: process.env.GATSBY_DOCSEARCH_INDEX, 
+    if (window.docsearch) {
+      window.docsearch({
+        apiKey: process.env.GATSBY_DOCSEARCH_API_KEY,
+        indexName: process.env.GATSBY_DOCSEARCH_INDEX,
         inputSelector: '#docs-search',
         algoliaOptions: {
           hitsPerPage: 5
@@ -63,7 +63,7 @@ class SearchBox extends React.Component {
           <input id="docs-search" type="search" placeholder="Search..." onFocus={() => this.setState({ focussed: true })}
           />
         </form>
-      </Container> 
+      </Container>
     )
   }
 }
