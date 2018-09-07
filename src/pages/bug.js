@@ -57,7 +57,7 @@ const BugPage = () => (
 <h5>Provide technical information</h5>
 <p>Which web browser you are using is probably the most important piece of information you can provide. As any web developer will tell you, the various incarnations of Internet Explorer are the most common web browsers where unexpected things can occur. Providing the version (e.g. Internet Explorer 8) is immensely helpful. Whether or not you are using a PC or Mac, iPhone, iPad or Android device is also important information.</p>
 
-                  <bugForm />
+                  <BugForm />
                 </div>
               </div>
             </div>
