@@ -2,14 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Content, {HTMLContent} from '../components/Content';
-import {graphql} from 'gatsby';
+import {graphql, Link} from 'gatsby';
 
 import Layout from '../components/layout';
 
 class IndexPageTemplate extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const {content, contentComponent} = this.props;
@@ -22,6 +19,7 @@ class IndexPageTemplate extends React.Component {
               <div className="column is-10 is-offset-1">
                 <div className="section">
                   <PageContent className="content" content={content} />
+                  <Link to="/bug" className="btn-primary">Submit A Bug</Link>
                 </div>
               </div>
             </div>

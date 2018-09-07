@@ -7,6 +7,7 @@ import Sidebar from './Sidebar';
 
 import './layout.css';
 import './styles.css';
+import './form.css';
 
 const Layout = ({children, data}) => (
   <StaticQuery
@@ -26,24 +27,24 @@ const Layout = ({children, data}) => (
           meta={[
             {
               name: 'description',
-              content: 'Isaac Martin — Product Engineer NYC'
+              content: 'Smakk Studios Documentation'
             },
             {name: 'keywords', content: 'developer, engineer, NYC'}
           ]}
         >
           <html lang="en" />
         </Helmet>
-        <Sidebar siteTitle={data.site.siteMetadata.title} />
         <div
           className="layoutWrap"
           style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0
+            minHeight: '100vh',
+            display: 'flex'
           }}
         >
+        <Sidebar siteTitle={data.site.siteMetadata.title} />
+        <div className="contentWrap pad">
           {children}
+          </div>
         </div>
       </>
     )}
