@@ -9,7 +9,7 @@ collections:
   - name: docs
     label: Documents
     folder: src/pages/docs
-    slug: '{{title}}'
+    slug: '{{slug}}'
     create: true
     fields:
       - {name: title, label: Title}
