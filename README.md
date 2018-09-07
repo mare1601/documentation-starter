@@ -49,7 +49,7 @@ This is another page.
 1. Go to http://localhost:8000/admin (or if deployed http://url.com/admin)
 2. Use the GUI to save a file (Netlify CMS handles all of the Front Matter)
 3. Netlify CMS will write these changes to the Git Repo
-4. http://localhost:8000/<path_of_the_doc> to view it in your browser
+4. The document should automatically show up in your navigation bar
 
 ## Why are we doing this?
 This will make our documentation very easy to edit / get set up. Ideally meaning we are more likely to do it. It also means that if we write some documentation once for example how to login with wordpress, we can copy the MD file into this starter and it will be already included.
