@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import bugForm from '../components/bugForm';
+import BugForm from '../components/bugForm';
 
 
 const BugPage = () => (
