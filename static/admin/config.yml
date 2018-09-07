@@ -12,6 +12,12 @@ collections:
     slug: '{{slug}}'
     create: true
     fields:
+        - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'doc',
+            }
       - {name: title, label: Title}
       - {name: body, label: Body, widget: markdown}
 
