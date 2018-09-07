@@ -8,7 +8,7 @@ This example is built on top of [Gatsby.js](https://www.gatsbyjs.org) and can be
 ## Creating A New Site based on this starter
 
 You can easily copy and deploy this repo straight to [Netlify](https://netlify.com).
-Press this button below to authenticate with Netlify, you will then need to select or create a repo that will store the data etc in. Ideally you can start a new documentation site without needing to clone and run on your machine.
+Press this button below to authenticate with Netlify, you will then need to select or create a repo that will store the data etc in. Ideally you can start a new documentation site without needing to clone and run on your machine. You will need to authenticate with github and confirm email to get into the admin
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/smkkstudios/documentation-starter&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
