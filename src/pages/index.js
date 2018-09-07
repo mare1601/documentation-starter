@@ -1,45 +1,65 @@
-import React, { Component } from 'react'
-import Layout from "../components/layout"
-import Link from 'gatsby-link'
-import styled from 'styled-components'
+import React from 'react';
+import PropTypes from 'prop-types';
 
+import Content, {HTMLContent} from '../components/Content';
+import {graphql} from 'gatsby';
 
-const CardContainer = styled.div`
-  display: flex;
-  margin: 32px 0;
-  justify-content: space-around;
-`
+import Layout from '../components/layout';
 
-const Card = styled(Link)`
-  display: inline-block;
-  border-radius: 4px;
-  padding: 20px 40px;
-  width: 250px;
-  background-color: #aaa;
-  color: #fff !important;
-  text-align: center;
-`
-
-class IndexPage extends Component {
+class IndexPageTemplate extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
   render() {
+    const {content, contentComponent} = this.props;
+    const PageContent = contentComponent || Content;
     return (
       <Layout>
-        <div>
-          <h1>Documentation</h1>
-          <p>Welcome to your new documentation site!</p>
-          <CardContainer>
-            <Card to="/getting-started">
-              Getting started
-          </Card>
-            <Card to="/about">
-              About us
-          </Card>
-          </CardContainer>
-        </div>
+        <section className="section">
+          <div className="container">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <div className="section">
+                  <PageContent className="content" content={content} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </Layout>
-    )
+    );
   }
 }
 
-export default IndexPage
+IndexPageTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
+  contentComponent: PropTypes.func
+};
+
+// export default IndexPageTemplate;
+
+const IndexPage = ({data}) => {
+  const {allMarkdownRemark} = data;
+
+  return <IndexPageTemplate contentComponent={HTMLContent} title={'home'} content={allMarkdownRemark.edges[0].node.html} />;
+};
+
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired
+};
+
+export default IndexPage;
+
+export const indexQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(filter: {frontmatter: {title: {eq: "home"}}}) {
+      edges {
+        node {
+          html
+        }
+      }
+    }
+  }
+`;
