@@ -2,6 +2,7 @@ import React from 'react';
 
 const BugForm = () => (
     <form className="pure-form pure-form-stacked" name="bugform" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="bugform" />
         <label>
           Your Name: <input type="text" name="name" />
         </label>
