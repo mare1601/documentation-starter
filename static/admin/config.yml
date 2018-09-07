@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: smkkstudios/documentation-starter
 
 media_folder: static/assets
 public_folder: assets
@@ -7,8 +8,26 @@ public_folder: assets
 collections:
   - name: docs
     label: Documents
-    folder: docs
+    folder: src/pages/docs
+    slug: '{{title}}'
     create: true
     fields:
       - {name: title, label: Title}
       - {name: body, label: Body, widget: markdown}
+
+
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - file: 'src/pages/home/index.md'
+        label: 'Home'
+        name: 'index'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'index',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
